@@ -43,10 +43,11 @@ export default function WhatWeDo() {
             {galleryImages.map((image, index) => (
               <div
                 key={index}
-                className="aspect-square bg-gray-200 rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+                className="aspect-square bg-gray-200 rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 hover-lift animate-fadeInUp"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-full h-full bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">Event Photo {index + 1}</span>
+                <div className="w-full h-full bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center group">
+                  <span className="text-gray-500 text-sm group-hover:text-teal-600 transition-colors duration-300">Event Photo {index + 1}</span>
                 </div>
               </div>
             ))}
